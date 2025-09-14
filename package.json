@@ -1,0 +1,33 @@
+{
+  "name": "expo-plugin-aliyun-push",
+  "version": "1.0.0",
+  "description": "Expo Config Plugin for Aliyun React Native Push",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf build",
+    "prepare": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "expo",
+    "expo-plugin",
+    "aliyun",
+    "push",
+    "notification",
+    "react-native"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@expo/config-plugins": "~8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "build",
+    "README.md"
+  ]
+}
