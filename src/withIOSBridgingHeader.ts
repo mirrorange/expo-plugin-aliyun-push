@@ -20,6 +20,7 @@ export const withIOSBridgingHeader: ConfigPlugin<AliyunPushPluginOptions> = (
       const iosPath = path.join(projectRoot, 'ios');
       const bridgingHeaderPath = path.join(
         iosPath,
+        projectName,
         `${projectName}-Bridging-Header.h`
       );
 
@@ -49,7 +50,7 @@ export const withIOSBridgingHeader: ConfigPlugin<AliyunPushPluginOptions> = (
   // 配置 Xcode 项目以使用桥接头文件
   config = withXcodeProject(config, (config) => {
     const projectName = config.modRequest.projectName || config.name;
-    const bridgingHeaderPath = `$(SRCROOT)/${projectName}-Bridging-Header.h`;
+    const bridgingHeaderPath = `${projectName}/${projectName}-Bridging-Header.h`;
     
     // 获取项目配置
     const project = config.modResults;
