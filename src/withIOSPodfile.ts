@@ -21,7 +21,7 @@ export const withIOSPodfile: ConfigPlugin<AliyunPushPluginOptions> = (
           let podfileContent = fs.readFileSync(podfilePath, 'utf8');
 
           // 添加阿里云仓库源（如果还没有）
-          const aliyunSource = "source 'https://github.com/aliyun/aliyun-specs.git'";
+          const aliyunSource = "source 'https://github.com/mirrorange/aliyun-push-specs.git'";
           const cocoapodsSource = "source 'https://github.com/CocoaPods/Specs.git'";
 
           // 检查是否已经包含阿里云源
