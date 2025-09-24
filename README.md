@@ -242,31 +242,13 @@ export default {
 
    - 确认推送证书已正确配置
    - 检查设备是否允许应用发送通知
-   - 使用真机测试（模拟器不支持推送）
+   - 使用真机测试
 
 3. **Android 厂商通道不工作**
+
    - 确认已在厂商开发者平台完成配置
-   - 检查手机是否安装了对应厂商的推送服务
-   - 某些厂商需要应用在后台或被杀死才能收到推送
-
-### 调试建议
-
-1. 启用调试日志：
-
-```typescript
-AliyunPush.setLogLevel(AliyunPush.AliyunPushLogLevel.Debug);
-```
-
-2. 检查设备注册状态：
-
-```typescript
-const deviceId = await AliyunPush.getDeviceId();
-console.log("Device ID:", deviceId);
-```
-
-3. 验证配置：
-   - Android: 检查 `android/app/src/main/AndroidManifest.xml`
-   - iOS: 检查 Xcode 项目的 Capabilities 和 AppDelegate
+   - 检查是否配置了对应厂商的推送服务
+   - 检查阿里云控制台是否配置了推送凭据
 
 ## 开发
 
@@ -274,7 +256,7 @@ console.log("Device ID:", deviceId);
 
 ```bash
 # 克隆仓库
-git clone <repository-url>
+git clone https://github.com/mirrorange/expo-plugin-aliyun-push.git
 cd plugin
 
 # 安装依赖
@@ -282,10 +264,6 @@ npm install
 
 # 构建插件
 npm run build
-
-# 在项目中使用本地插件
-cd ../your-expo-project
-npm install ../plugin
 ```
 
 ### 发布
